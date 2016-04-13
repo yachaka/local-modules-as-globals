@@ -1,6 +1,6 @@
 {
   "name": "local-modules-as-global",
-  "version": "0.0.3.1",
+  "version": "0.0.4",
   "description": "Import local modules globally",
   "main": "index.js",
   "scripts": {
