@@ -1,6 +1,11 @@
 # local-modules-as-globals
 Import local modules like node_modules/ :fire: 
 
+## Installation
+```bash
+npm install --save local-module-as-globals
+```
+
 ## Usage
 
 1 . Make any local folder in your project global
