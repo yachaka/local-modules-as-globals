@@ -22,22 +22,22 @@ makeItGlobal(__dirname)
 myProject/
 	server/
 		index.js
-			| ...
-			| import makeItGlobal from 'local-modules-as-globals'
-			| makeItGlobal(__dirname)
-			| ...
-
 		myModules/
+			index.js
+				| ...
+				| import makeItGlobal from 'local-modules-as-globals'
+				| makeItGlobal(__dirname)
+				| ...
 			moduleA/ /* My moduleA */
 			moduleB/ /* My moduleB */
 		far/
 			away/
 				...
-				require('@myModules/moduleA') // Will require /myProject/server/myModules/moduleA
+				require('@moduleA') // Will require /myProject/server/myModules/moduleA
 				...
 		other/
 			place/
 				...
-				require('@myModules/moduleB') // Will require /myProject/server/myModules/moduleB
+				require('@moduleB') // Will require /myProject/server/myModules/moduleB
 				...
 ```
