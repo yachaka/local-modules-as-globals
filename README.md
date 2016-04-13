@@ -3,21 +3,17 @@ Import local modules like node_modules/ :fire:
 
 ## Usage
 
-1 . Import `makeItGlobal`
+1 . Make any local folder in your project global
 ```js
+// At the top of myProject/server/index.js
 import makeItGlobal from 'local-modules-as-globals'
-```
-
-2 . Make any local folder in your project global
-```js
-// myProject/server/index.js
-...
 makeItGlobal(__dirname)
+...
 ```
 
-3 . You can then require from any locally-global directory using the `@` prefix.
+2 . You can then require from any locally-global directory using the `@` prefix.
 
-```
+```js
 myProject/
 	server/
 		index.js
@@ -27,8 +23,8 @@ myProject/
 			| ...
 
 		myModules/
-			moduleA/
-			moduleB/
+			moduleA/ /* My moduleA */
+			moduleB/ /* My moduleB */
 		far/
 			away/
 				...
