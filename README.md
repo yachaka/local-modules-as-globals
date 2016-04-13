@@ -8,7 +8,7 @@ npm install --save local-module-as-globals
 
 ## Usage
 
-1 . Make any local folder in your project global
+1 . Make any local folder in your project global recursively
 ```js
 // At the top of myProject/server/index.js
 import makeItGlobal from 'local-modules-as-globals'
@@ -30,6 +30,7 @@ myProject/
 				| ...
 			moduleA/ /* My moduleA */
 			moduleB/ /* My moduleB */
+				nestedModule/ /* My nested module */
 		far/
 			away/
 				...
@@ -39,5 +40,6 @@ myProject/
 			place/
 				...
 				require('@moduleB') // Will require /myProject/server/myModules/moduleB
+				require('@moduleB/nestedModule') // Will require /myProject/server/myModules/moduleB/nestedModule
 				...
 ```
