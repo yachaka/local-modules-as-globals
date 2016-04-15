@@ -11,9 +11,7 @@ npm install --save local-modules-as-globals
 1 . Make any local folder in your project global recursively
 ```js
 // At the top of myProject/server/index.js
-import makeItGlobal from 'local-modules-as-globals'
-makeItGlobal(__dirname)
-...
+import 'local-modules-as-globals/register' // Registers __dirname
 ```
 
 2 . You can then require from any locally-global directory using the `@` prefix.
@@ -24,9 +22,7 @@ myProject/
 		index.js
 		myModules/
 			index.js
-				| ...
-				| import makeItGlobal from 'local-modules-as-globals'
-				| makeItGlobal(__dirname)
+				| import 'local-modules-as-globals/register'
 				| ...
 			moduleA/ /* My moduleA */
 			moduleB/ /* My moduleB */
