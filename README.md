@@ -3,7 +3,7 @@ Import local modules like node_modules/ :fire:
 
 ## Installation
 ```bash
-npm install --save local-module-as-globals
+npm install --save local-modules-as-globals
 ```
 
 ## Usage
