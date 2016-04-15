@@ -1,4 +1,4 @@
-var addPath = require('../')
-addPath(__dirname);
+require('../register')
 
 require('@module');
+require('fs');
